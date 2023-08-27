@@ -35,7 +35,7 @@
           <img
             src="../../assets/img/groups/girls.webp"
             alt="Девушки"
-            class="img-round"
+            class="img-round girls"
           />
           <div class="group__text">
             <p class="group__title">Девушки</p>
@@ -75,6 +75,10 @@ import SectionDevider from '../SectionDevider.vue';
   gap: 25px;
 }
 
+.girls {
+  object-position: 20% 10%;
+}
+
 .group {
   text-align: center;
 }
@@ -82,6 +86,7 @@ import SectionDevider from '../SectionDevider.vue';
 .img-round {
   height: 250px;
   width: 250px;
+  object-fit: cover;
 }
 .group__title {
   margin: 0;

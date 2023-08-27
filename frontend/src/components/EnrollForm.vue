@@ -19,14 +19,14 @@
     <q-input
       outlined
       label="Дата рождения"
-      mask="date"
-      placeholder="2010/01/29"
+      mask="##.##.####"
+      placeholder="29/01/2010"
       v-model="formData.date"
     >
       <template #append>
         <q-icon name="event" class="cursor-pointer icon">
           <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-            <q-date v-model="formData.date" class="date">
+            <q-date v-model="formData.date" class="date" mask="DD.MM.YYYY">
               <div class="row items-center justify-end">
                 <q-btn v-close-popup label="Закрыть" color="primary" flat />
               </div>

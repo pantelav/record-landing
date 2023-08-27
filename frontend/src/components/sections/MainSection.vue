@@ -1,17 +1,19 @@
 <template>
-  <section class="section-main flex" id="main">
-    <div class="section__block info-wrapper">
+  <section class="section-main" id="main">
+    <div class="info-wrapper container">
       <div class="block-info">
-        <h1>Клуб чир спорта и&nbsp;чирлидинга RECORD</h1>
+        <h1 class="text-center">Клуб чир спорта и&nbsp;чирлидинга RECORD</h1>
         <p style="text-align: justify">
           Чирлидинг — молодой и быстроразвивающийся вид спорта. Сочетает в себе
           хореографию, акробатику, элементы гимнастики и танца.
         </p>
-        <EmptyButton />
-        <SocialBtns />
+        <div class="block-buttons">
+          <EmptyButton />
+          <SocialBtns />
+        </div>
       </div>
     </div>
-    <div class="section__block block-img"></div>
+    <div class="block-img"></div>
   </section>
 </template>
 
@@ -22,31 +24,51 @@ import SocialBtns from '../SocialBtns.vue';
 
 <style scoped lang="scss">
 .section-main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 710px;
-  background: $primary;
+  background-color: $primary;
 }
-.section__block {
-  width: 50%;
+.info-wrapper {
   height: 100%;
 }
 .block-info {
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 15px;
-  padding: 0 90px;
+  padding-right: 90px;
+  padding-left: 20px;
   p {
     color: $font;
   }
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 768px) {
+    width: 100%;
     padding: 0 40px;
   }
 }
+
+.block-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .block-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
   background-image: url('src/assets/img/cheer-main.webp');
   background-size: cover;
   background-position: center;

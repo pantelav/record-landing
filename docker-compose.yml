@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  vue-app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    container_name: vue-app
+    volumes:
+      - /etc/letsencrypt/:/etc/letsencrypt/
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - mynetwork
+  express-app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    container_name: express-app
+    environment:
+      - MODE=prod
+      - BOT_TOKEN=${BOT_TOKEN}
+      - BOT_PASSWORD=%{BOT_PASSWORD}
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    networks:
+      - mynetwork
+  mongodb:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongodb-record:/data/db
+    networks:
+      - mynetwork
+
+volumes:
+  mongodb-record:
+    external: true
+    
+networks:
+  mynetwork:

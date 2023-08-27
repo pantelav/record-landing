@@ -4,11 +4,13 @@
     :class="{ 'header-scrolled': checkScroll }"
   >
     <q-toolbar class="container flex justify-between items-center">
-      <img
-        src="../assets/LOGO.svg"
-        alt="Рекорд"
-        :class="{ logo: true, 'logo-small': checkScroll }"
-      />
+      <a href="#main">
+        <img
+          src="../assets/LOGO.svg"
+          alt="Рекорд"
+          :class="{ logo: true, 'logo-small': checkScroll }"
+        />
+      </a>
 
       <nav class="nav">
         <a href="#main">Главная</a>
@@ -59,6 +61,7 @@ const checkScroll = computed((): boolean => {
 }
 .logo {
   transition: all 0.2s;
+  cursor: pointer;
 }
 .logo-small {
   transform-origin: left center;

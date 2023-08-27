@@ -15,14 +15,14 @@ function openDialog() {
 
 <style scoped lang="scss">
 .btn {
+  width: 152px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  // background: transparent;
-  background: rgba(54, 54, 54, 0.106);
-  width: 152px;
-  height: 50px;
+  background: $accent;
+  color: white;
   border: 3px solid $accent;
   border-radius: 25px;
   font-size: 18px;
@@ -32,6 +32,7 @@ function openDialog() {
 .btn:hover {
   background: $accent;
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.308);
+  transform: scale(1.1);
   .arrow {
     transform: translateX(5px);
   }

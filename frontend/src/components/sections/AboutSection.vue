@@ -111,4 +111,8 @@ import SectionDevider from '../SectionDevider.vue';
     font-size: 18px;
   }
 }
+
+.img-round {
+  object-fit: cover;
+}
 </style>
