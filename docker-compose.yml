@@ -23,7 +23,7 @@ services:
     environment:
       - MODE=prod
       - BOT_TOKEN=${BOT_TOKEN}
-      - BOT_PASSWORD=%{BOT_PASSWORD}
+      - BOT_PASSWORD=${BOT_PASSWORD}
     depends_on:
       - mongodb
     links:

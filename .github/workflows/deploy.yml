@@ -8,7 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    env:
+      BOT_TOKEN: ${{secrets.BOT_TOKEN}}
+      BOT_PASSWORD: ${{secrets.BOT_PASSWORD}}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
