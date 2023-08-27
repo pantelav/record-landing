@@ -24,8 +24,8 @@ jobs:
           cd ~/record-landing
           git pull origin main
           docker compose down
-          docker compose up -d
           docker system prune -af
           docker image prune -af
           docker system prune -af --volumes
+          docker compose up -d
           EOF
