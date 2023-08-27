@@ -82,7 +82,7 @@ import SocialBtns from '../SocialBtns.vue';
 
   .info-wrapper {
     width: 100%;
-    background-image: url('src/assets/img/cheer-main.jpg');
+    background-image: url('src/assets/img/cheer-main.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

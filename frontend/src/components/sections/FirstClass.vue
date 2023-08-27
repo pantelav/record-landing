@@ -4,7 +4,7 @@
       <template #media>
         <img
           class="parallax-img"
-          src="../../assets/img/пробник.webp"
+          src="../../assets/img/demo.webp"
           alt="Чирлидер"
         />
       </template>
