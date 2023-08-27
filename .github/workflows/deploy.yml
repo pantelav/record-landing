@@ -25,9 +25,9 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'bash -s' << EOF
           cd ~/record-landing
           git pull origin main
-          docker compose down
+          docker-compose down
           docker system prune -af
           docker image prune -af
           docker system prune -af --volumes
-          docker compose --env BOT_TOKEN=${{secrets.BOT_TOKEN}} --env BOT_PASSWORD=${{secrets.BOT_PASSWORD}} up -d
+          docker-compose --env BOT_TOKEN=${{secrets.BOT_TOKEN}} --env BOT_PASSWORD=${{secrets.BOT_PASSWORD}} up -d
           EOF
