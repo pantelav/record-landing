@@ -22,7 +22,7 @@ mongoose
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use("/api", ordersRouter);
+app.use("/", ordersRouter);
 
 app.listen(5000, () => {
 	console.log("Server started:");
